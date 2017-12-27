@@ -13,6 +13,9 @@
 *.userprefs
 
 opencv/*
+*.jpg
+*.jpeg
+*.png
 
 # Build results
 [Dd]ebug/
