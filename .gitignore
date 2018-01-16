@@ -12,10 +12,12 @@
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
+
 opencv/*
 *.jpg
 *.jpeg
 *.png
+*.vcxproj
 
 # Build results
 [Dd]ebug/
