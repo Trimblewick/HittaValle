@@ -32,9 +32,9 @@ void GenerateDataset(cv::Mat &dataset, cv::Mat &labels)
 		y1 = std::max(y - 31, 0);
 		y2 = std::max(y + 32, height);
 
-		for (int j = 0; j < height; j += stride)
+		for (int j = 0; j + size < height; j += stride)
 		{
-			for (int k = 0; k < width; k += stride)
+			for (int k = 0; k + size < width; k += stride)
 			{
 				cv::Mat partition(size, size, CV_8U);
 				image(cv::Rect(k, j, k + size, j + size)).copyTo(partition);
@@ -46,6 +46,7 @@ void GenerateDataset(cv::Mat &dataset, cv::Mat &labels)
 				{
 					++++label;
 				}
+				labels.push_back(label);
 			}
 		}
 	}
