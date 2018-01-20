@@ -14,8 +14,7 @@
 
 
 opencv/*
-*.jpeg
-*.png
+
 *.vcxproj
 
 # Build results
